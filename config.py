@@ -18,18 +18,21 @@ class Config:
 
 
 class StagConfig(Config):
+    ENV = 'staging'
     FLASK_ENV = 'staging'
     DEBUG = False
     TESTING = True
 
 
 class ProdConfig(Config):
+    ENV = 'production'
     FLASK_ENV = 'production'
     DEBUG = False
     TESTING = False
 
 
 class DevConfig(Config):
+    ENV = 'development'
     FLASK_ENV = 'development'
     DEBUG = True
     TESTING = True
