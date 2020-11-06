@@ -2,8 +2,7 @@
 
 
 """Flask config."""
-import re
-from os import environ, path, urandom
+from os import environ, path
 from dotenv import load_dotenv
 
 basedir = path.abspath(path.dirname(__file__))
@@ -12,7 +11,7 @@ load_dotenv(path.join(basedir, '.env'))
 
 class Config:
     """Base config."""
-    SECRET_KEY = environ.get('SECRET_KEY') or urandom(16)
+    SECRET_KEY = environ.get('SECRET_KEY')
     FLASK_APP = 'flask-starter-kit'
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
